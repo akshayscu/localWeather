@@ -20,10 +20,10 @@ $(document).ready(function(){
         mph = windSpeed*2.2369;
 
         $('#city').html(city);
-        $('#weatherType').html(mph.toFixed(1)+" mph");
+        $('#weatherType').html(weatherType);
         //$('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
         $('#temp').html(fahrenheit.toFixed(1));
-        $('#windSpeed').html(windSpeed);
+        $('#windSpeed').html(mph.toFixed(1)+" mph");
         //console.log("out");
 
         $('#tog').on('change',function(){
