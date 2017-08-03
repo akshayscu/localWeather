@@ -22,11 +22,14 @@ $(document).ready(function(){
         $('#weatherType').html(weatherType);
         $('#temp').html(kelvin);
         $('#windSpeed').html(windSpeed);
+        console.log("out");
 
         if($('#tog').prop('checked')){
+            console.log("in If");
             $('#temp').html('hi '+celsius);
           }
         else{
+            console.log("in Else");
             $('#temp').html(fahrenheit);
           }
 
