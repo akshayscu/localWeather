@@ -29,7 +29,7 @@ $(document).ready(function(){
         });
 
         $('#tog').change(function() {
-          $('#togglepressed').html('Toggle: ' + $(this).prop('checked'))
+          $('#togglepressed').html('Toggle: ' + $(this).prop('checked'));
         };)
 
         });
