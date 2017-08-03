@@ -25,11 +25,11 @@ $(document).ready(function(){
         console.log("out");
 
         $('#tog').on('change',function(){
-          if($(this).prop('checked')){
-            $('#temp').html(fahrenheit.toFixed(1));
+          if(!$(this).prop('checked')){
+            $('#temp').html("Cel "+celsius.toFixed(1));
           }
           else{
-            $('#temp').html('hi '+celsius.toFixed(1));
+            $('#temp').html('Far '+fahrenheit.toFixed(1));
           }
         });
 
