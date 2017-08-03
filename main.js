@@ -20,18 +20,20 @@ $(document).ready(function(){
 
         $('#city').html(city);
         $('#weatherType').html(weatherType);
-        $('#temp').html(kelvin);
+        $('#temp').html(fahrenheit.toFixed(1));
         $('#windSpeed').html(windSpeed);
         console.log("out");
 
-        if($('#tog').prop('checked')){
-            console.log("in If");
-            $('#temp').html('hi '+celsius);
-          }
-        else{
-            console.log("in Else");
-            $('#temp').html(fahrenheit);
-          }
+        $('#tog').click(function(){
+          if($('#tog').prop('checked')){
+              console.log("in If");
+              $('#temp').html('hi '+celsius.toFixed(1));
+            }
+          else{
+              console.log("in Else");
+              $('#temp').html(fahrenheit.toFixed(1));
+            }
+        });
 
         });
 
