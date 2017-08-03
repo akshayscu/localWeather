@@ -26,11 +26,8 @@ $(document).ready(function(){
 
         $('#tog').on('change',function(){
           $('#temp').html('hi '+celsius.toFixed(1));
-        });
-
-        $('#tog').change(function() {
           $('#togglepressed').html('Toggle: ' + $(this).prop('checked'));
-        };)
+        });
 
         });
 
