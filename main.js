@@ -15,7 +15,7 @@ $(document).ready(function(){
         kelvin = data.main.temp;
         fahrenheit = (kelvin)*(9/5)-459.67;
         celsius = kelvin-273;
-        city = data.city;
+        city = data.name;
         windSpeed = data.wind.speed;
 
         $('#city').html(city);
