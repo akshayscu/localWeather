@@ -24,15 +24,8 @@ $(document).ready(function(){
         $('#windSpeed').html(windSpeed);
         console.log("out");
 
-        $('#tog').click(function(){
-          if($('#tog').prop('checked')){
-              console.log("in If");
-              $('#temp').html('hi '+celsius.toFixed(1));
-            }
-          else{
-              console.log("in Else");
-              $('#temp').html(fahrenheit.toFixed(1));
-            }
+        $('#tog').on('change',function(){
+          $('#temp').html('hi '+celsius.toFixed(1));
         });
 
         });
