@@ -26,10 +26,10 @@ $(document).ready(function(){
 
         $('#tog').on('change',function(){
           if(!$(this).prop('checked')){
-            $('#temp').html("Cel "+celsius.toFixed(1));
+            $('#temp').html(celsius.toFixed(1));
           }
           else{
-            $('#temp').html('Far '+fahrenheit.toFixed(1));
+            $('#temp').html(fahrenheit.toFixed(1));
           }
         });
 
