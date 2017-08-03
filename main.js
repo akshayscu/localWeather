@@ -7,7 +7,7 @@ $(document).ready(function(){
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      var api = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid=30c9b976c915ba695fcf255d8a91fd88";
+      var api = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid=30c9b976c915ba695fcf255d8a91fd88";
 
       $.getJSON(api,function(data){
 
