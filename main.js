@@ -20,16 +20,17 @@ $(document).ready(function(){
 
         $('#city').html(city);
         $('#weatherType').html(weatherType);
-        $('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
+        //$('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
+        $('#temp').html(fahrenheit.toFixed(1));
         $('#windSpeed').html(windSpeed);
         //console.log("out");
 
         $('#tog').on('change',function(){
           if(!$(this).prop('checked')){
-            $('#temp').html(celsius.toFixed(1)+' &#8451;');
+            $('#temp').html(celsius.toFixed(1));
           }
           else{
-            $('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
+            $('#temp').html(fahrenheit.toFixed(1));
           }
         });
 
