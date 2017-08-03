@@ -25,8 +25,12 @@ $(document).ready(function(){
         console.log("out");
 
         $('#tog').on('change',function(){
-          $('#temp').html('hi '+celsius.toFixed(1));
-          $('#togglepressed').html('Toggle: ' + $(this).prop('checked'));
+          if($(this).prop('checked')){
+            $('#temp').html(fahrenheit.toFixed(1));
+          }
+          else{
+            $('#temp').html('hi '+celsius.toFixed(1));
+          }
         });
 
         });
