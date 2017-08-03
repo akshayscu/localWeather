@@ -17,9 +17,10 @@ $(document).ready(function(){
         celsius = kelvin-273;
         city = data.name;
         windSpeed = data.wind.speed;
+        mph = windSpeed*2.2369;
 
         $('#city').html(city);
-        $('#weatherType').html(weatherType);
+        $('#weatherType').html(mph.toFixed(1)+" mph");
         //$('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
         $('#temp').html(fahrenheit.toFixed(1));
         $('#windSpeed').html(windSpeed);
