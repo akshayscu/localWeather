@@ -22,7 +22,7 @@ $(document).ready(function(){
         $('#weatherType').html(weatherType);
         $('#temp').html(fahrenheit.toFixed(1));
         $('#windSpeed').html(windSpeed);
-        console.log("out");
+        //console.log("out");
 
         $('#tog').on('change',function(){
           if(!$(this).prop('checked')){
