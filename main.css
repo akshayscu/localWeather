@@ -1,5 +1,10 @@
 body {
   font-family: Pacifico;
+  background-size: cover;
+  height: 1000px;
+  margin: -3%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 footer{
