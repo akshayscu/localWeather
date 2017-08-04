@@ -10,7 +10,7 @@ body {
 footer{
   margin-top: 350px;
   font-size: 1.6em;
-  color: white;
+  color: grey;
 }
 
 #city,#weatherType,#windSpeed{
