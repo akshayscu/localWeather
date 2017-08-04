@@ -1,4 +1,4 @@
-body {
+body{
   font-family: Pacifico;
   background-size: cover;
   height: 600px;
@@ -7,11 +7,10 @@ body {
   position: relative;
 }
 
-footer {
+#foot{
   margin-top: 350px;
   width: 50%;
-  /*margin-left: 30%;
-  margin-right: 30%;*/
+  margin-left: 30%;
   font-size: 1.5em;
   opacity: 0.8;
   border-radius: 10px;
