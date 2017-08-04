@@ -1,7 +1,7 @@
 body {
   font-family: Pacifico;
   background-size: cover;
-  height: 650px;
+  height: 600px;
   /*margin: -3%;*/
   overflow-x: hidden;
   position: relative;
@@ -10,6 +10,7 @@ body {
 footer{
   margin-top: 350px;
   font-size: 1.6em;
+  color: white;
 }
 
 #city,#weatherType,#windSpeed{
