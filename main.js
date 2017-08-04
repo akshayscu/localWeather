@@ -35,6 +35,9 @@ $(document).ready(function(){
           }
         });
 
+        var conditions = weatherType.split("");
+        console.log(conditions);
+
         });
 
       });
