@@ -10,10 +10,12 @@ body {
 footer{
   margin-top: 350px;
   font-size: 1.6em;
+  width: 100%;
   /*color: grey;*/
 }
 
 #city,#weatherType,#windSpeed,#foot{
   font-size: 1.5em;
   opacity: 0.8;
+  border-radius: 10px;
 }
