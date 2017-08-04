@@ -39,24 +39,24 @@ $(document).ready(function(){
         //console.log(conditions);
         for(var i=0;i<conditions.length;i++){
           if(/clear/.test(conditions[i])===true){
-            $('body').css("background-image","url('/ShowWeather/img/clear.jpg')");
+            $('body').css("background-image","url('../img/clear.jpg')");
           }
 
           else if(/cloud/.test(conditions[i])===true){
             console.log(/cloud/.test(conditions[i])+" /cloud/.test(conditions[i])");
-            $('body').css("background-image","url('/ShowWeather/img/cloudy.jpg')");
+            $('body').css("background-image","url('../img/cloudy.jpg')");
           }
 
           else if(/rain/.test(conditions[i])===true){
-            $('body').css("background-image","url('/ShowWeather/img/rainy.jpg')");
+            $('body').css("background-image","url('../img/rainy.jpg')");
           }
 
           else if(/snow/.test(conditions[i])===true){
-            $('body').css("background-image","url('/ShowWeather/img/snow.jpg')");
+            $('body').css("background-image","url('../img/snow.jpg')");
           }
 
           else{
-            $('body').css("background-image","url('/ShowWeather/img/placeholder.jpg')");
+            $('body').css("background-image","url('../img/placeholder.jpg')");
           }
 
         }
