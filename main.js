@@ -39,23 +39,23 @@ $(document).ready(function(){
         //console.log(conditions);
         for(var i=0;i<conditions.length;i++){
           if(/clear/.test(conditions[i])===true){
-            $('body').css('background-image','img/clear.jpg');
+            $('body').css('background-image','/img/clear.jpg');
           }
 
           else if(/cloud/.test(conditions[i])===true){
-            $('body').css('background-image','img/cloudy.jpg');
+            $('body').css('background-image','/img/cloudy.jpg');
           }
 
           else if(/rain/.test(conditions[i])===true){
-            $('body').css('background-image','img/rainy.jpg');
+            $('body').css('background-image','/img/rainy.jpg');
           }
 
           else if(/snow/.test(conditions[i])===true){
-            $('body').css('background-image','img/snow.jpg');
+            $('body').css('background-image','/img/snow.jpg');
           }
 
           else{
-            $('body').css('background-image','img/placeholder.jpg');
+            $('body').css('background-image','/img/placeholder.jpg');
           }
 
         }
