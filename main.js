@@ -24,7 +24,6 @@ $(document).ready(function(){
         //$('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
         $('#temp').html(fahrenheit.toFixed(1));
         $('#windSpeed').html(mph.toFixed(1)+" mph");
-        //console.log("out");
 
         $('#tog').on('change',function(){
           if(!$(this).prop('checked')){
@@ -36,14 +35,12 @@ $(document).ready(function(){
         });
 
         var conditions = weatherType.split(" ");
-        //console.log(conditions);
         for(var i=0;i<conditions.length;i++){
           if(/clear/.test(conditions[i])===true){
             $('body').css("background-image","url('img/clear.jpg')");
           }
 
           else if(/cloud/.test(conditions[i])===true){
-            console.log(/cloud/.test(conditions[i])+" /cloud/.test(conditions[i])");
             $('body').css("background-image","url('img/cloudy.jpg')");
           }
 
