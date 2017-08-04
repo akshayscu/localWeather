@@ -57,9 +57,15 @@ $(document).ready(function(){
             $('body').css("background-image","url('img/snow.jpg')");
             flag=true;
           }
+          else if(/fog/.test(conditions[i])===true){
+            console.log("in fog");
+            $('body').css("background-image","url('img/fog.jpg')");
+            flag=true;
+          }
         }
 
         if(flag===false){
+          console.log("in none");
           $('body').css("background-image","url('img/placeholder.jpg')");
         }
 
