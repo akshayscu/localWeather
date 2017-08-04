@@ -43,6 +43,7 @@ $(document).ready(function(){
           }
 
           else if(/cloud/.test(conditions[i])===true){
+            console.log(/cloud/.test(conditions[i])+" /cloud/.test(conditions[i])");
             $('body').css("background-image","url('/img/cloudy.jpg')");
           }
 
