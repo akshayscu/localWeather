@@ -7,11 +7,11 @@ body {
   position: relative;
 }
 
-footer{
+footer {
   margin-top: 350px;
-  width: 100%;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 50%;
+  /*margin-left: 30%;
+  margin-right: 30%;*/
   font-size: 1.5em;
   opacity: 0.8;
   border-radius: 10px;
