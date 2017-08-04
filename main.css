@@ -13,7 +13,7 @@ footer{
   /*color: grey;*/
 }
 
-#city,#weatherType,#windSpeed{
+#city,#weatherType,#windSpeed,#foot{
   font-size: 1.5em;
   opacity: 0.8;
 }
