@@ -39,31 +39,20 @@ $(document).ready(function(){
           if(/clear/.test(conditions[i])===true){
             $('body').css("background-image","url('img/clear.jpg')");
           }
-
           else if(/cloud/.test(conditions[i])===true){
             $('body').css("background-image","url('img/cloudy.jpg')");
           }
-
           else if(/rain/.test(conditions[i])===true){
             $('body').css("background-image","url('img/rainy.jpg')");
           }
-
           else if(/snow/.test(conditions[i])===true){
             $('body').css("background-image","url('img/snow.jpg')");
           }
-
           else{
             $('body').css("background-image","url('img/placeholder.jpg')");
           }
-
         }
-
         });
-
       });
-
     }
   });
-
-
-// 30c9b976c915ba695fcf255d8a91fd88
