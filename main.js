@@ -35,8 +35,13 @@ $(document).ready(function(){
           }
         });
 
-        var conditions = weatherType.split("");
-        console.log(conditions);
+        var conditions = weatherType.split(" ");
+        //console.log(conditions);
+        for(var i=0;i<conditions.length;i++){
+          if(conditions[i]===clear){
+            $('body').css('background-image','url(img/clear.jpg)');
+          }
+        }
 
         });
 
