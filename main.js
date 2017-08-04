@@ -35,23 +35,34 @@ $(document).ready(function(){
         });
 
         var conditions = weatherType.split(" ");
+        var flag = false;
         for(var i=0;i<conditions.length;i++){
           if(/clear/.test(conditions[i])===true){
             $('body').css("background-image","url('img/clear.jpg')");
+            console.log("in clear");
+            flag=true;
           }
           else if(/cloud/.test(conditions[i])===true){
+            console.log("in cloud");
             $('body').css("background-image","url('img/cloudy.jpg')");
+            flag=true;
           }
           else if(/rain/.test(conditions[i])===true){
+            console.log("in rain");
             $('body').css("background-image","url('img/rainy.jpg')");
+            flag=true;
           }
           else if(/snow/.test(conditions[i])===true){
+            console.log("in snow");
             $('body').css("background-image","url('img/snow.jpg')");
-          }
-          else{
-            $('body').css("background-image","url('img/placeholder.jpg')");
+            flag=true;
           }
         }
+
+        if(flag===false){
+          $('body').css("background-image","url('img/placeholder.jpg')");
+        }
+
         });
       });
     }
