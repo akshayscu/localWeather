@@ -38,9 +38,26 @@ $(document).ready(function(){
         var conditions = weatherType.split(" ");
         //console.log(conditions);
         for(var i=0;i<conditions.length;i++){
-          if(conditions[i]==='clear'){
+          if(/clear/.test(conditions[i])===true){
             $('body').css('background-image','img/clear.jpg');
           }
+
+          else if(/cloud/.test(conditions[i])===true){
+            $('body').css('background-image','img/cloudy.jpg');
+          }
+
+          else if(/rain/.test(conditions[i])===true){
+            $('body').css('background-image','img/rainy.jpg');
+          }
+
+          else if(/snow/.test(conditions[i])===true){
+            $('body').css('background-image','img/snow.jpg');
+          }
+
+          else{
+            $('body').css('background-image','img/placeholder.jpg');
+          }
+
         }
 
         });
