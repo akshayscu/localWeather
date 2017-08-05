@@ -59,7 +59,12 @@ $(document).ready(function(){
           }
           else if(/fog/.test(conditions[i])===true){
             console.log("in fog");
-            $('body').css("background-image","url('img/fog.jpg')");
+            $('body').css("background-image","url('img/foggy.jpg')");
+            flag=true;
+          }
+          else if(/haz(e|y)|mist/.test(conditions[i])===true){
+            console.log("in haze");
+            $('body').css("background-image","url('img/hazy.jpg')");
             flag=true;
           }
         }
