@@ -1,2 +1,2 @@
+Please visit https://akshayscu.github.io/localWeather/
 # Weather WebApp
-visit akshayscu.github.io/localWeather
