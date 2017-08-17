@@ -20,8 +20,8 @@ $(document).ready(function(){
           console.log(forecastAPI);
           $.getJSON(forecastAPI,function(dataForecast){
             console.log(dataForecast);
-            weatherType = dataForecast.IconPhrase;
-            fahrenheit = dataForecast.Temperature.Value;
+            weatherType = dataForecast[0].IconPhrase;
+            fahrenheit = dataForecast[0].Temperature.Value;
             celsius = ((fahrenheit-32)*5)/9;
             $('#weatherType').html(weatherType);
             $('#temp').html(fahrenheit);
