@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,city,windSpeed,mph;
+  var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,city,windSpeed,mph,key;
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
@@ -76,7 +76,6 @@ $(document).ready(function(){
       //   }
       //
       //   });
-      var key = 0;
       $.getJSON(locationAPI,function(data){
           key = data.Key;
           console.log(key+" inside");
