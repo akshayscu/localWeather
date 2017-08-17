@@ -2,6 +2,10 @@ $(document).ready(function(){
 
   var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,city,windSpeed,mph;
 
+  mph = windSpeed*2.2369;
+  celsius = kelvin-273;
+  fahrenheit = (kelvin)*(9/5)-459.67;
+
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
       long = position.coords.longitude;
@@ -13,12 +17,9 @@ $(document).ready(function(){
 
         weatherType = data.weather[0].description;
         kelvin = data.main.temp;
-        fahrenheit = (kelvin)*(9/5)-459.67;
-        celsius = kelvin-273;
         city = data.name;
         windSpeed = data.wind.speed;
-        mph = windSpeed*2.2369;
-
+        
         $('#city').html(city);
         $('#weatherType').html(weatherType);
         //$('#temp').html(fahrenheit.toFixed(1)+' &#8457;');
