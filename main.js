@@ -14,13 +14,13 @@ $(document).ready(function(){
           key = dataLoc.Key;
           area = dataLoc.EnglishName;
           $('#city').html(area);
-          forecastAPI = "https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/"+key+"?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb";
+          forecastAPI = "https://dataservice.accuweather.com/currentconditions/v1/"+key+"?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb";
           console.log(forecastAPI);
           $.getJSON(forecastAPI,function(dataForecast){
             console.log(dataForecast);
-            weatherType = dataForecast[0].IconPhrase;
-            fahrenheit = dataForecast[0].Temperature.Value;
-            celsius = ((fahrenheit-32)*5)/9;
+            weatherType = dataForecast[0].WeatherText;
+            fahrenheit = dataForecast[0].Temperature.Imperial.Value;
+            celsius = dataForecast[0].Temperature.Metric.Value;
             $('#tog').on('change',function(){
                 if(!$(this).prop('checked')){
                   $('#temp').html(celsius);
