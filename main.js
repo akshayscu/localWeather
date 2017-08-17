@@ -79,7 +79,9 @@ $(document).ready(function(){
       var key = 0;
       $.getJSON(locationAPI,function(data){
           key = data.Key;
+          console.log(key+" inside");
       });
+      console.log(key+" outside");
       var forecastAPI = "https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/"+key+"?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb";
       console.log(forecastAPI);
     });
