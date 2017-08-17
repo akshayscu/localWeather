@@ -2,8 +2,6 @@ $(document).ready(function(){
 
   var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,area,windSpeed,mph,key,locationAPI,forecastAPI;
 
-
-
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
       long = position.coords.longitude;
@@ -23,8 +21,56 @@ $(document).ready(function(){
             weatherType = dataForecast[0].IconPhrase;
             fahrenheit = dataForecast[0].Temperature.Value;
             celsius = ((fahrenheit-32)*5)/9;
+            $('#tog').on('change',function(){
+                if(!$(this).prop('checked')){
+                  $('#temp').html(celsius);
+                }
+                else{
+                  $('#temp').html(fahrenheit);
+                }
+              });
             $('#weatherType').html(weatherType);
             $('#temp').html(fahrenheit);
+
+            var conditions = weatherType.split(" ");
+              var flag = false;
+              for(var i=0;i<conditions.length;i++){
+                if(/clear/.test(conditions[i])===true){
+                  $('body').css("background-image","url('img/clear.jpg')");
+                  console.log("in clear");
+                  flag=true;
+                }
+                else if(/cloud/.test(conditions[i])===true){
+                  console.log("in cloud");
+                  $('body').css("background-image","url('img/cloudy.jpg')");
+                  flag=true;
+                }
+                else if(/rain/.test(conditions[i])===true){
+                  console.log("in rain");
+                  $('body').css("background-image","url('img/rainy.jpg')");
+                  flag=true;
+                }
+                else if(/snow/.test(conditions[i])===true){
+                  console.log("in snow");
+                  $('body').css("background-image","url('img/snow.jpg')");
+                  flag=true;
+                }
+                else if(/fog/.test(conditions[i])===true){
+                  console.log("in fog");
+                  $('body').css("background-image","url('img/foggy.jpg')");
+                  flag=true;
+                }
+                else if(/haz(e|y)|mist/.test(conditions[i])===true){
+                  console.log("in haze");
+                  $('body').css("background-image","url('img/hazy.jpg')");
+                  flag=true;
+                }
+              }
+
+              if(flag===false){
+                console.log("in none");
+                $('body').css("background-image","url('img/placeholder.jpg')");
+              }
           });
       });
 
