@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-  var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,city,windSpeed,mph,key,locationAPI,forecastAPI;
+  var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,area,windSpeed,mph,key,locationAPI,forecastAPI;
+
+
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
@@ -10,10 +12,19 @@ $(document).ready(function(){
       locationAPI = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb&q="+lat+"%2C"+long;
       console.log(locationAPI);
 
-      $.getJSON(locationAPI,function(data){
-          key = data.Key;
+      $.getJSON(locationAPI,function(dataLoc){
+          key = dataLoc.Key;
+          area = dataLoc.EnglishName;
+          $('#city').html(area);
           forecastAPI = "https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/"+key+"?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb";
           console.log(forecastAPI);
+          $.getJSON(forecastAPI,function(dataForecast){
+            weatherType = dataForecast.IconPhrase;
+            fahrenheit = dataForecast.Temperature.Value;
+            celsius = ((fahrenheit-32)*5)/9;
+            $('#weatherType').html(weatherType);
+            $('#temp').html(fahrenheit);
+          });
       });
 
     });
