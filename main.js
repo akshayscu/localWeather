@@ -8,7 +8,7 @@ $(document).ready(function(){
       lat = position.coords.latitude;
 
       var locationAPI = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb&q="+lat+"%2C"+long;
-      console.log(api);
+      console.log(locationAPI);
 
       // $.getJSON(api,function(data){
       //
