@@ -19,6 +19,7 @@ $(document).ready(function(){
           forecastAPI = "https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/"+key+"?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb";
           console.log(forecastAPI);
           $.getJSON(forecastAPI,function(dataForecast){
+            console.log(dataForecast);
             weatherType = dataForecast.IconPhrase;
             fahrenheit = dataForecast.Temperature.Value;
             celsius = ((fahrenheit-32)*5)/9;
