@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-  var long,lat,weatherType,temp,kelvin,celsius,fahrenheit,area,windSpeed,mph,key,locationAPI,forecastAPI;
+  var long,lat,weatherType,celsius,fahrenheit,area,key,locationAPI,forecastAPI,link;
 
-  mph = windSpeed*2.2369;
-  celsius = kelvin-273;
-  fahrenheit = (kelvin)*(9/5)-459.67;
+  // mph = windSpeed*2.2369;
+  // celsius = kelvin-273;
+  // fahrenheit = (kelvin)*(9/5)-459.67;
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
@@ -25,21 +25,25 @@ $(document).ready(function(){
             weatherType = dataForecast[0].WeatherText;
             fahrenheit = dataForecast[0].Temperature.Imperial.Value;
             celsius = dataForecast[0].Temperature.Metric.Value;
-            $('#tog').on('change',function(){
-                if(!$(this).prop('checked')){
-                  $('#temp').html(celsius);
-                }
-                else{
-                  $('#temp').html(fahrenheit);
-                }
-              });
+            link = dataForecast[0].Link;
             $('#weatherType').html(weatherType);
             $('#temp').html(fahrenheit);
+            $('#tog').on('change',function(){
+              if(!$(this).prop('checked')){
+                $('#temp').html(celsius);
+              }
+              else{
+                $('#temp').html(fahrenheit);
+              }
+            });
+            $('#weatherType').click(function(){
+              window.open(link,'_blank');
+            });
 
             var conditions = weatherType.split(" ");
               var flag = false;
               for(var i=0;i<conditions.length;i++){
-                if(/clear/.test(conditions[i])===true){
+                if(/clear|sun/.test(conditions[i])===true){
                   $('body').css("background-image","url('img/clear.jpg')");
                   console.log("in clear");
                   flag=true;
