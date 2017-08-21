@@ -7,8 +7,7 @@ $(document).ready(function(){
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      //locationAPI = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb&q="+lat+"%2C"+long;
-      locationAPI = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb&q=21.101606%2C79.066530";
+      locationAPI = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7lX0OuSF5hvFQJVSFMjUz49bJt5V6Fdb&q="+lat+"%2C"+long;
       console.log(locationAPI);
 
       $.getJSON(locationAPI,function(dataLoc){
