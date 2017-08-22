@@ -13,11 +13,11 @@ $(document).ready(function() {
       $.ajax({
         type: "GET",
         url: locationAPI,
-        headers: {
-          'Access-Control-Allow-Credentials': 'include',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': '*'
-        },
+        // headers: {
+        //   'Access-Control-Allow-Credentials': 'include',
+        //   'Access-Control-Allow-Origin': '*',
+        //   'Access-Control-Allow-Headers': '*'
+        // },
         // xhrFields: {
         //   'withCredentials': true
         // },
@@ -31,11 +31,11 @@ $(document).ready(function() {
           $.ajax({
             type: "GET",
             url: forecastAPI,
-            headers: {
-              'Access-Control-Allow-Credentials': 'include',
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Headers': '*'
-            },
+            // headers: {
+            //   'Access-Control-Allow-Credentials': 'include',
+            //   'Access-Control-Allow-Origin': '*',
+            //   'Access-Control-Allow-Headers': '*'
+            // },
             // xhrFields: {
             //   'withCredentials': true
             // },
