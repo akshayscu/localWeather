@@ -17,9 +17,9 @@ $(document).ready(function() {
           'Access-Control-Allow-Credentials': true,
           'Access-Control-Allow-Origin': true
         },
-        xhrFields: {
-          'withCredentials': true
-        },
+        // xhrFields: {
+        //   'withCredentials': true
+        // },
         success: function(dataLoc) {
           key = dataLoc.Key;
           area = dataLoc.EnglishName;
@@ -34,9 +34,9 @@ $(document).ready(function() {
               'Access-Control-Allow-Credentials': true,
               'Access-Control-Allow-Origin': true
             },
-            xhrFields: {
-              'withCredentials': true
-            },
+            // xhrFields: {
+            //   'withCredentials': true
+            // },
             success: function(dataForecast) {
               console.log(dataForecast);
               weatherType = dataForecast[0].WeatherText;
