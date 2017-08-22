@@ -16,7 +16,7 @@ $(document).ready(function() {
         headers: {
           'Access-Control-Allow-Credentials': 'include',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET'
+          'Access-Control-Allow-Headers': '*'
         },
         // xhrFields: {
         //   'withCredentials': true
@@ -34,7 +34,7 @@ $(document).ready(function() {
             headers: {
               'Access-Control-Allow-Credentials': 'include',
               'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Methods': 'GET'
+              'Access-Control-Allow-Headers': '*'
             },
             // xhrFields: {
             //   'withCredentials': true
