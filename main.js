@@ -20,7 +20,7 @@ $(document).ready(function() {
       'Access-Control-Allow-Origin':true
     },
     xhrFields: {
-      withCredentials: true
+      'withCredentials': true
     },
     success: function(dataLoc) {
       key = dataLoc.Key;
@@ -37,7 +37,7 @@ $(document).ready(function() {
           'Access-Control-Allow-Origin':true
         },
         xhrFields: {
-          withCredentials: true
+          'withCredentials': true
         },
         success: function(dataForecast) {
           console.log(dataForecast);
