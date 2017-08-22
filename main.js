@@ -53,13 +53,13 @@ $(document).ready(function(){
                   flag=true;
                 }
 
-                else if(/cloud/.test(conditions[i])===true && dayTime===true){
+                else if(/c|Cloud/.test(conditions[i])===true && dayTime===true){
                   console.log("in cloud");
                   $('body').css("background-image","url('img/cloudy.jpg')");
                   flag=true;
                 }
 
-                else if(/cloud/.test(conditions[i])===true && dayTime===false){
+                else if(/c|Cloud/.test(conditions[i])===true && dayTime===false){
                   console.log("in cloud");
                   $('body').css("background-image","url('img/cloudyNight.jpg')");
                   flag=true;
