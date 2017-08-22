@@ -14,8 +14,8 @@ $(document).ready(function() {
         type: "GET",
         url: locationAPI,
         headers: {
-          'Access-Control-Allow-Credentials': true,
-          'Access-Control-Allow-Origin': true
+          'Access-Control-Allow-Credentials': 'include',
+          'Access-Control-Allow-Origin': '*'
         },
         // xhrFields: {
         //   'withCredentials': true
@@ -31,8 +31,8 @@ $(document).ready(function() {
             type: "GET",
             url: forecastAPI,
             headers: {
-              'Access-Control-Allow-Credentials': true,
-              'Access-Control-Allow-Origin': true
+              'Access-Control-Allow-Credentials': 'include',
+              'Access-Control-Allow-Origin': '*'
             },
             // xhrFields: {
             //   'withCredentials': true
