@@ -19,6 +19,7 @@ $(document).ready(function(){
           $.getJSON(forecastAPI,function(dataForecast){
             console.log(dataForecast);
             weatherType = dataForecast[0].WeatherText;
+            console.log(weatherType);
             fahrenheit = dataForecast[0].Temperature.Imperial.Value;
             celsius = dataForecast[0].Temperature.Metric.Value;
             link = dataForecast[0].Link;
