@@ -22,6 +22,7 @@ $(document).ready(function(){
             fahrenheit = dataForecast[0].Temperature.Imperial.Value;
             celsius = dataForecast[0].Temperature.Metric.Value;
             link = dataForecast[0].Link;
+            dayTime = dataForecast[0].IsDayTime;
             $('#weatherType').html(weatherType);
             $('#temp').html(fahrenheit);
             $('#tog').on('change',function(){
@@ -39,16 +40,30 @@ $(document).ready(function(){
             var conditions = weatherType.split(" ");
               var flag = false;
               for(var i=0;i<conditions.length;i++){
-                if(/clear|sun/.test(conditions[i])===true){
+                if(/clear|sun/.test(conditions[i])===true && dayTime===true){
                   $('body').css("background-image","url('img/clear.jpg')");
                   console.log("in clear");
                   flag=true;
                 }
-                else if(/cloud/.test(conditions[i])===true){
+
+                else if(/clear/.test(conditions[i])===true && dayTime===false){
+                  $('body').css("background-image","url('img/clearNight.jpg')");
+                  console.log("in clear");
+                  flag=true;
+                }
+
+                else if(/cloud/.test(conditions[i])===true && dayTime===true){
                   console.log("in cloud");
                   $('body').css("background-image","url('img/cloudy.jpg')");
                   flag=true;
                 }
+
+                else if(/cloud/.test(conditions[i])===true && dayTime===false){
+                  console.log("in cloud");
+                  $('body').css("background-image","url('img/cloudyNight.jpg')");
+                  flag=true;
+                }
+
                 else if(/rain/.test(conditions[i])===true){
                   console.log("in rain");
                   $('body').css("background-image","url('img/rainy.jpg')");
