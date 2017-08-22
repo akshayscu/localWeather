@@ -49,6 +49,7 @@ $(document).ready(function(){
 
                 else if(/clear/.test(conditions[i])===true && dayTime===false){
                   $('body').css("background-image","url('img/clearNight.jpg')");
+                  $('#title').css("color","white");
                   console.log("in clear");
                   flag=true;
                 }
@@ -62,6 +63,7 @@ $(document).ready(function(){
                 else if(/c|Cloud/.test(conditions[i])===true && dayTime===false){
                   console.log("in cloud");
                   $('body').css("background-image","url('img/cloudyNight.jpg')");
+                  $('#title').css("color","white");
                   flag=true;
                 }
 
