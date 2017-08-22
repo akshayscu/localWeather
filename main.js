@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var long,lat,weatherType,celsius,fahrenheit,area,key,locationAPI,forecastAPI,link;
+  var long,lat,weatherType,celsius,fahrenheit,area,key,locationAPI,forecastAPI,link,dayTime;
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
