@@ -63,6 +63,11 @@ $(document).ready(function() {
               var conditions = weatherType.split(" ");
               var flag = false;
               for (var i = 0; i < conditions.length; i++) {
+                if (/(P|p)art/.test(conditions[i]) === true && dayTime === true) {
+                  $('body').css("background-image", "url('img/partlySunnyCloudy.jpg')");
+                  console.log("in clear");
+                  flag = true;
+                }
                 if (/clear|(S|s)un/.test(conditions[i]) === true && dayTime === true) {
                   $('body').css("background-image", "url('img/clear.jpg')");
                   console.log("in clear");
