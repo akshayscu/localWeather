@@ -67,43 +67,51 @@ $(document).ready(function() {
                   $('body').css("background-image", "url('img/partlySunnyCloudy.jpg')");
                   console.log("in clear");
                   flag = true;
-                }
-                if (/(C|c)lear|(S|s)un/.test(conditions[i]) === true && dayTime === true) {
+                  break;
+                } else if (/(C|c)lear|(S|s)un/.test(conditions[i]) === true && dayTime === true) {
                   $('body').css("background-image", "url('img/clear.jpg')");
                   console.log("in clear");
                   flag = true;
+                  break;
                 } else if (/(C|c)lear/.test(conditions[i]) === true && dayTime === false) {
                   $('body').css("background-image", "url('img/clearNight.jpg')");
                   $('#title').css("color", "white");
                   $('#temp').css("color", "white");
                   console.log("in clear");
                   flag = true;
+                  break;
                 } else if (/(C|c)loud/.test(conditions[i]) === true && dayTime === true) {
                   console.log("in cloud");
                   $('body').css("background-image", "url('img/cloudy.jpg')");
                   flag = true;
+                  break;
                 } else if (/(C|c)loud/.test(conditions[i]) === true && dayTime === false) {
                   console.log("in cloud");
                   $('body').css("background-image", "url('img/cloudyNight.jpg')");
                   $('#title').css("color", "white");
                   $('#temp').css("color", "white");
                   flag = true;
+                  break;
                 } else if (/(R|r)ain/.test(conditions[i]) === true) {
                   console.log("in rain");
                   $('body').css("background-image", "url('img/rainy.jpg')");
                   flag = true;
+                  break;
                 } else if (/(S|s)now/.test(conditions[i]) === true) {
                   console.log("in snow");
                   $('body').css("background-image", "url('img/snow.jpg')");
                   flag = true;
+                  break;
                 } else if (/(F|f)og/.test(conditions[i]) === true) {
                   console.log("in fog");
                   $('body').css("background-image", "url('img/foggy.jpg')");
                   flag = true;
+                  break;
                 } else if (/(H|h)az(e|y)|mist/.test(conditions[i]) === true) {
                   console.log("in haze");
                   $('body').css("background-image", "url('img/hazy.jpg')");
                   flag = true;
+                  break;
                 }
               }
 
