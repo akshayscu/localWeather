@@ -65,7 +65,9 @@ $(document).ready(function() {
               for (var i = 0; i < conditions.length; i++) {
                 if (/(P|p)art/.test(conditions[i]) === true && dayTime === true) {
                   $('body').css("background-image", "url('img/partlySunnyCloudy.jpg')");
-                  console.log("in clear");
+                  $('#title').css("color", "white");
+                  $('#temp').css("color", "white");
+                  console.log("in partlySunnyCloudy");
                   flag = true;
                   break;
                 } else if (/(C|c)lear|(S|s)un/.test(conditions[i]) === true && dayTime === true) {
@@ -77,7 +79,7 @@ $(document).ready(function() {
                   $('body').css("background-image", "url('img/clearNight.jpg')");
                   $('#title').css("color", "white");
                   $('#temp').css("color", "white");
-                  console.log("in clear");
+                  console.log("in clearNight");
                   flag = true;
                   break;
                 } else if (/(C|c)loud/.test(conditions[i]) === true && dayTime === true) {
@@ -86,7 +88,7 @@ $(document).ready(function() {
                   flag = true;
                   break;
                 } else if (/(C|c)loud/.test(conditions[i]) === true && dayTime === false) {
-                  console.log("in cloud");
+                  console.log("in cloudyNight");
                   $('body').css("background-image", "url('img/cloudyNight.jpg')");
                   $('#title').css("color", "white");
                   $('#temp').css("color", "white");
